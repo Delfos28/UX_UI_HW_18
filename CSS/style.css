@@ -6,7 +6,7 @@
 .logo {
     width: 23%;
     padding: 1%;
-    
+        
 }
 nav {
     width: 73%;
@@ -31,7 +31,7 @@ ul {
 }
 
 footer {
-    background-color: #a1a132;
+    background-color: #373738;
 }
 footer>ul {
     display: inline-block;
@@ -41,4 +41,17 @@ footer>ul {
 .footerText {
       display: inline-block;
       text-align: center;
+}
+.flexContainer { 
+      display: flex;
+      flex-direction: column;
+}
+.flexContainer>div {
+      width: 33%;
+
+
+}
+.workGrid {
+      display: grid;
+
 }
