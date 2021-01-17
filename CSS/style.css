@@ -1,7 +1,7 @@
 .inline-block {
     display: inline-block;
     vertical-align: top;
-
+    
 }
 .logo {
     width: 23%;
@@ -43,15 +43,75 @@ footer>ul {
       text-align: center;
 }
 .flexContainer { 
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    width: 100%;
 }
-.flexContainer>div {
+
+/* .flexContainer>div {
       width: 33%;
 
 
-}
+} */
 .workGrid {
       display: grid;
+      grid-template-areas: 'myArea otherArea';
+      padding: 35px;
+      column-gap: 20px;
 
+}
+
+.photoshop {
+     
+    padding: 35px;
+}
+
+.illustrator {
+    
+    padding: 35px;
+}
+
+.xd {
+   
+    padding: 35px;
+    }
+
+.avengers {
+        grid-area: myArea;
+        padding: 15px;
+    }
+.disney {
+    grid-area: otherArea;
+
+}
+
+@media only screen and (max-width: 600px){
+    .flexContainer {
+        flex-direction: column !important;
+    }
+    .photoshop {
+        width: 100%;
+    }
+    .illustrator {
+        width: 100%;
+
+    }
+    .xd {
+        width: 100%;
+    }
+
+    .workGrid {
+       grid-template-rows: 300px 300px;  
+        grid-template-columns: 1fr; 
+        grid-template-areas: "myArea" "otherArea";
+    }
+    .avengers {
+        width: 100%;
+    }
+    .disney {
+        width: 100%;
+    }
 }
