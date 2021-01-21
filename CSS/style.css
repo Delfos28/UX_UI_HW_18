@@ -3,115 +3,109 @@
     vertical-align: top;
     
 }
-.logo {
-    width: 23%;
-    padding: 1%;
-        
+body { 
+    margin: 0;
+    padding: 0;
+    background: url(IMAGES/Background/Pattern.png);
+    background-repeat: repeat-y;
+}
+nav,
+li,
+.logo { display: inline-block; }
+.logo,
+.thumbnail {
+    width: 62px;
+    height: 62px;
 }
 nav {
-    width: 73%;
-    padding: 1%;
-
-}
-ul {
-    width: 50%;
-    margin-left: auto;
-}
-.logo {
+    padding: 30px;
     text-align: center;
+    color: black;
+    transition: all .3s ease-in-out;
 }
-.heroImg {
-    height: 600px;
-    padding: 25px;
+nav ul { 
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+nav  ul li {
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+nav ul li:hover { color: orange; } 
 
+.heroImg img {
+    height: 600px;
+    width: auto;
+    padding: 25px;
+    margin: 0 auto;
+    align-self: center;
 }
 .content {
     width: 500px;
     margin: 0 auto;
 }
+.mb-6 { margin-bottom: 100px; }
+footer { 
+    padding: 30px;
+    text-align: center;
+    background-color: black;
+    color: #ededed;
+    transition: all .3s ease-in-out;
+}
+footer ul { 
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+footer ul li {
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+footer ul li:hover { color: orange; } 
 
-footer {
-    background-color: #373738;
-}
-footer>ul {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 680px;
-}
-.footerText {
-      display: inline-block;
-      text-align: center;
-}
 .flexContainer { 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 35px;
     width: 100%;
+    padding:35px;
 }
-
-/* .flexContainer>div {
-      width: 33%;
-
-
-} */
+.flexContainer>div {
+      padding: 1%;
+} 
 .workGrid {
       display: grid;
-      grid-template-areas: 'myArea otherArea';
-      padding: 35px;
-      column-gap: 20px;
-
+      grid-template-areas: 'myArea''otherArea';
+      padding: 20px;
+      row-gap: 20px;
+      grid-template-rows: 300px 300px;
+      grid-template-columns: 600px 600px; 
 }
-
-.photoshop {
-     
-    padding: 35px;
+.workGrid>div {
+    padding: 1%;
 }
-
-.illustrator {
-    
-    padding: 35px;
+.Avengers {
+    grid-area: 'myArea';
 }
-
-.xd {
-   
-    padding: 35px;
-    }
-
-.avengers {
-        grid-area: myArea;
-        padding: 15px;
-    }
 .disney {
-    grid-area: otherArea;
-
+    grid-area: 'otherArea';
 }
-
-@media only screen and (max-width: 600px){
-    .flexContainer {
-        flex-direction: column !important;
-    }
-    .photoshop {
-        width: 100%;
-    }
-    .illustrator {
-        width: 100%;
-
-    }
-    .xd {
-        width: 100%;
-    }
-
-    .workGrid {
-       grid-template-rows: 300px 300px;  
-        grid-template-columns: 1fr; 
-        grid-template-areas: "myArea" "otherArea";
-    }
-    .avengers {
-        width: 100%;
-    }
-    .disney {
-        width: 100%;
-    }
+@media only screen and (max-width:600){
+.flexContainer {  
+    flex-direction: column;
+}
+.flexContainer>div {
+    width:100%,
+}
+.workGrid{
+    grid-template-areas:'myArea''otherArea';
+    grid-template-rows: 300px 300px ;
+    grid-template-columns: 1fr ;
+}
 }
